@@ -13,15 +13,15 @@ const (
 
 const Name = "br"
 
-// New returns client and handler options for the brotli compression method
+// WithCompression returns client and handler options for the brotli compression method
 // using the default compression level.
-func New() connect.Option {
-	return NewWithLevel(DefaultCompression)
+func WithCompression() connect.Option {
+	return WithCompressionLevel(DefaultCompression)
 }
 
-// NewWithLevel returns client and handler options for the brotli compression
+// WithCompressionLevel returns client and handler options for the brotli compression
 // method for your prefered compression level.
-func NewWithLevel(level int) connect.Option {
+func WithCompressionLevel(level int) connect.Option {
 	d, c := brComp(level)
 	return compressorOption{
 		ClientOption:  connect.WithAcceptCompression(Name, d, c),

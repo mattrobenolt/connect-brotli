@@ -15,7 +15,7 @@ import (
 
 func ExampleNew() {
 	// Get client and server options
-	opts := brotli.New()
+	opts := brotli.WithCompression()
 
 	// Create a server.
 	_, h := pingv1connect.NewPingServiceHandler(&pingServer{}, opts)
