@@ -8,7 +8,7 @@ Compression is provided from the [github.com/andybalholm/brotli](https://github.
 
 # Usage
 
-The `brotli.New` function will return an option that allow both client and servers to compress and decompress using brotli.
+The `brotli.WithCompression` function will return an option that allow both client and servers to compress and decompress using brotli.
 
 ```go
 import "go.withmatt.com/connect-brotli"
