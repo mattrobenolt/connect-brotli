@@ -13,7 +13,7 @@ The `brotli.WithCompression` function will return an option that allow both clie
 ```go
 import "go.withmatt.com/connect-brotli"
 
-opts := brotli.New()
+opts := brotli.WithCompression()
 ```
 
 To enable client compression and force a specific method use `connect.WithSendCompression(brotli.Name)`.
