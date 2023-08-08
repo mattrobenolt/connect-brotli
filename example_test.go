@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/bufbuild/connect-go"
+	"connectrpc.com/connect"
 	brotli "go.withmatt.com/connect-brotli"
 	pingv1 "go.withmatt.com/connect-brotli/internal/gen/connect/ping/v1"
 	"go.withmatt.com/connect-brotli/internal/gen/connect/ping/v1/pingv1connect"
@@ -37,10 +37,10 @@ func ExampleNew() {
 	}
 	fmt.Println("The answer is", res.Msg)
 	fmt.Println(res.Header().Get("Some-Other-Header"))
-	//OUTPUT:
-	//hello from connect
-	//The answer is number:42
-	//hello!
+	// OUTPUT:
+	// hello from connect
+	// The answer is number:42
+	// hello!
 }
 
 type pingServer struct {

@@ -1,8 +1,8 @@
 package brotli
 
 import (
+	"connectrpc.com/connect"
 	"github.com/andybalholm/brotli"
-	"github.com/bufbuild/connect-go"
 )
 
 const (
